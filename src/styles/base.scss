@@ -1,8 +1,84 @@
 @import 'colors';
 @import 'typography';
+@import 'mixins';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
 
 body {
   font-family: $font-family;
-  color: $primary-color;
   font-size: $base-font-size;
+  text-align: center;
+
+  background-color: $light-color;
+  color: $primary-color;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  color: $tertiary-color;
+
+  .highlight {
+    color: $light-color;
+  }
+}
+
+h2, h3, h4, h5, h6 {
+  color: $dark-color;
+}
+
+header {
+  height: 100vh;
+}
+
+header, main, footer {
+  @include flex-center-column;
+  max-width: 100vw;
+}
+
+main {
+  padding: 2.5rem 1rem;
+}
+
+#logo {
+  margin: 1.25rem auto 1.5rem;
+  max-width: 100%;
+}
+
+.default-header, .success-header {
+  @include flex-center-column;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.default-header {
+  background: $secondary-color url('../assets/patterns/pattern-vermelha.png') calc(100% + 2.75rem) top / 151% repeat;
+  color: $light-color;
+
+  img {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+.success-header {
+  background: $primary-color url('../assets/patterns/pattern-azul.png') calc(100% + 2.75rem) top / 151% repeat;
+  color: $light-color;
+
+  img {
+    margin: 0 auto;
+    max-width: 100%;
+  }
 }

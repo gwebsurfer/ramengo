@@ -1,0 +1,161 @@
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+h1 .highlight {
+  padding-top: 0.688rem;
+  font-size: 7.5rem;
+  font-weight: 900;
+  line-height: 6.25rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.938rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 0rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: -1rem;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: -2rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+header > p {
+  margin: 1.5rem 1.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #FAFAED;
+  color: #1820EF;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  color: #FFC024;
+}
+h1 .highlight {
+  color: #FAFAED;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #000;
+}
+
+header {
+  height: 100vh;
+}
+
+header, main, footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100vw;
+}
+
+main {
+  padding: 2.5rem 1rem;
+}
+
+#logo {
+  margin: 1.25rem auto 1.5rem;
+  max-width: 100%;
+}
+
+.default-header, .success-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.default-header {
+  background: #FF4E42 url("../assets/patterns/pattern-vermelha.png") calc(100% + 2.75rem) top/151% repeat;
+  color: #FAFAED;
+}
+.default-header img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.success-header {
+  background: #1820EF url("../assets/patterns/pattern-azul.png") calc(100% + 2.75rem) top/151% repeat;
+  color: #FAFAED;
+}
+.success-header img {
+  margin: 0 auto;
+  max-width: 100%;
+}

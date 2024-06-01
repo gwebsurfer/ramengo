@@ -1,4 +1,59 @@
 $font-family: 'M PLUS Rounded 1c', sans-serif;
 
-$base-font-size: 1.5rem;
+$base-font-size: 1rem;
 $heading-font-size: 3rem;
+
+h1 {
+  font-size: $heading-font-size;
+  font-weight: 900;
+  line-height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .highlight {
+    padding-top: 0.688rem;
+    font-size: 7.5rem;
+    font-weight: 900;
+    line-height: 6.25rem;
+    text-transform: uppercase;
+  }
+}
+
+h2 {
+  font-size: $heading-font-size - 1.5rem;
+  font-weight: 900;
+  line-height: 1.938rem;
+}
+
+h3 {
+  font-size: $heading-font-size - 2rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: $heading-font-size - 3rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: $heading-font-size - 4rem;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: $heading-font-size - 5rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: $base-font-size;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+header > p {
+  margin: 1.5rem 1.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
