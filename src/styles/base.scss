@@ -1,0 +1,8 @@
+@import 'colors';
+@import 'typography';
+
+body {
+  font-family: $font-family;
+  color: $primary-color;
+  font-size: $base-font-size;
+}
