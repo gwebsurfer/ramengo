@@ -21,7 +21,7 @@ body {
   text-align: center;
 
   background-color: $light-color;
-  color: $primary-color;
+  color: $dark-color;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -35,8 +35,12 @@ h1 {
   }
 }
 
-h2, h3, h4, h5, h6 {
+h2, h4, h5, h6 {
   color: $dark-color;
+}
+
+h3 {
+  color: $primary-color;
 }
 
 header {
@@ -50,11 +54,26 @@ header, main, footer {
 
 main {
   padding: 2.5rem 1rem;
+  gap: 3.875rem;
+
+  .slider {
+    gap: 1.5rem;
+  }
+}
+
+footer {
+  padding-top: 0.5rem;
+  padding-bottom: 2.375rem;
 }
 
 #logo {
   margin: 1.25rem auto 1.5rem;
   max-width: 100%;
+}
+
+#broths p, #proteins p {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .default-header, .success-header {

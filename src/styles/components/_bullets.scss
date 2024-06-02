@@ -1,0 +1,23 @@
+@import '../colors';
+
+.slider-container .slider-bullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 0.5rem;
+
+  .bullet {
+    width: 0.75rem;
+    height: 0.75rem;
+    background: $neutral-color;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    cursor: pointer;
+
+    &.active {
+      width: 2.25rem;
+      border-radius: 0.5rem;
+      background: $secondary-color;
+    }
+  }
+}

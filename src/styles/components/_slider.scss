@@ -1,0 +1,39 @@
+@import '../colors';
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 18rem;
+  margin: 0 auto;
+
+  .slider-items {
+    display: flex;
+    transition: transform 0.3s ease;
+    gap: 1rem;
+  }
+
+  .slider-item {
+    min-width: 18rem;
+    max-height: 19.75rem;
+    padding: 2.5rem 1rem 0.5rem;
+    background: $light-color;
+    box-shadow: 0 0.25rem 0.75rem 0 rgba(224, 219, 191, 0.6);
+    border-radius: 0.75rem;
+    cursor: pointer;
+
+    img {
+      padding: 0.5rem 0 0.875rem;
+    }
+
+    h6 {
+      padding: 0.625rem 0 1.25rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 900;
+      line-height: 1.5rem;
+      color: $secondary-color;
+    }
+  }
+}
