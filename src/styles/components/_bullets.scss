@@ -1,6 +1,4 @@
-@import '../colors';
-
-.slider-container .slider-bullets {
+.slider-bullets {
   display: flex;
   justify-content: center;
   margin-top: 1.5rem;
@@ -19,5 +17,11 @@
       border-radius: 0.5rem;
       background: $secondary-color;
     }
+  }
+}
+
+@media (min-width: 992px) {
+  .slider-bullets {
+    display: none;
   }
 }

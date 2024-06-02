@@ -15,22 +15,42 @@
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
 
   &::after {
     content: url('../../assets/icons/arrow.svg');
+    display: inline-block;
+    width: 1.313rem;
+    height: 1rem;
+    vertical-align: middle;
   }
 
   &:hover {
-      background-color: darken($primary-color, 20%);
+    background-color: darken($primary-color, 10%);
+    gap: 1rem;
+
+    &::after {
+      animation: moveArrow 0.6s infinite alternate;
+    }
   }
 }
 
 .primary-button:disabled {
   background-color: $dark-gray-color;
   cursor: initial;
+  gap: 0.8rem;
 
   &::after {
     content: url('../../assets/icons/arrow-disabled.svg');
+    animation: none;
+  }
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0.3rem);
   }
 }
