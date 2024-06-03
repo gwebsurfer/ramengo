@@ -5,4 +5,6 @@ export default defineConfig({
   build: {
     outDir: '../dist',
   },
+  envDir: '../',
+  envPrefix: 'VITE_',
 });
