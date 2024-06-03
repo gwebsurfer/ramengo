@@ -1,6 +1,15 @@
 import './styles/main.scss';
-import { createSlider } from './slider.js';
+
 import { brothsData, proteinsData } from './mockData.js';
+
+import { getActiveIdsFromLocalStorage } from './utils/localStorage.js';
+import { createSlider } from './components/slider/slider.js';
+import { checkOrderButton, handleOrder } from './utils/orderUtils.js';
+import { getOrderSuccess } from './utils/state.js';
+import { getProducts } from './services/getProducts.js';
+
+//const brothsData = getProducts('broths');
+//const proteinsData = getProducts('proteins');
 
 document.addEventListener('DOMContentLoaded', () => {
   const { activeBrothId, activeProteinId } = getActiveIdsFromLocalStorage();
@@ -10,16 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const orderButton = document.querySelector('#order-button');
-
-function checkOrderButton() {
-  const { activeBrothId, activeProteinId } = getActiveIdsFromLocalStorage();
-  if (activeBrothId && activeProteinId) {
-    orderButton.disabled = false;
-  } else {
-    orderButton.disabled = true;
-  }
-}
-
 orderButton.addEventListener('click', async () => {
   const { activeBrothId, activeProteinId } = getActiveIdsFromLocalStorage();
 
@@ -28,23 +27,9 @@ orderButton.addEventListener('click', async () => {
     proteinId: activeProteinId,
   };
 
-  await postOrder(body);
-  removeItemsFromLocalStorage();
+  if (getOrderSuccess()) {
+    window.location.reload();
+  } else {
+    await handleOrder(body, orderButton);
+  }
 });
-
-async function postOrder(body) {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-  console.log('Order submitted:', body);
-}
-
-function getActiveIdsFromLocalStorage() {
-  return {
-    activeBrothId: localStorage.getItem('brothsId'),
-    activeProteinId: localStorage.getItem('proteinsId'),
-  };
-}
-
-function removeItemsFromLocalStorage() {
-  localStorage.removeItem('brothsId');
-  localStorage.removeItem('proteinsId');
-}

@@ -1,8 +1,4 @@
-export function createSpinner() {
-  const spinner = document.createElement('div');
-  spinner.className = 'spinner';
-  return spinner;
-}
+import { createSpinner } from '../spinner/spinner.js';
 
 export function createSlider(sectionId, data, checkOrderButton, activeItemId) {
   const section = document.querySelector(sectionId);
