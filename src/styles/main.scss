@@ -1,8 +1,9 @@
-@import 'colors';
-@import 'typography';
-@import 'mixins';
-@import 'base';
-@import 'components/slider';
+@import 'components/base';
+@import 'components/colors';
+@import 'components/mixins';
+@import 'components/typography';
 @import 'components/bullets';
-@import 'components/spinner';
 @import 'components/buttons';
+@import '../components/slider/slider.scss';
+@import '../components/spinner/spinner.scss';
+@import '../components/toast/toast.scss';
