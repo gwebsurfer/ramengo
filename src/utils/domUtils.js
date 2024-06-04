@@ -7,7 +7,7 @@ export function updateHeader(response) {
     <div class="logo">
       <img src="/assets/logo/ramen-go-logo-2.svg" alt="RamenGo Logo" />
     </div>
-    <img src="${response.image}" alt="${response.description}" />
+    <img class="photo" src="${response.image}" alt="${response.description}" />
     <h3>Your Order:</h3>
     <h2>${response.description}</h2>
   `;
@@ -15,17 +15,23 @@ export function updateHeader(response) {
 
 export function updateMain() {
   const main = document.getElementById('main');
-  document.querySelector('#broths').style.display = 'none';
-  document.querySelector('#proteins').style.display = 'none';
+  const brothsSection = document.getElementById('broths');
+  const proteinsSection = document.getElementById('proteins');
+  const buttonSection = document.getElementById('button');
 
-  main.innerHTML = `
-    <section id="order-success">
-      <div class="order-success">
-        <img src="./assets/bowing.svg" alt="RamenGo Illustration" />
-        <h3>どもありがとうございます。</h3>
-        <h2>Your order is being prepared</h2>
-        <p>Hold on, when you least expect you will be eating your rámen.</p>
-      </div>
-    </section>
+  brothsSection.style.display = 'none';
+  proteinsSection.style.display = 'none';
+
+  const orderSuccessSection = document.createElement('section');
+  orderSuccessSection.id = 'order-success';
+  orderSuccessSection.innerHTML = `
+    <div class="bowing">
+      <img src="./assets/bowing.svg" alt="RamenGo Illustration" />
+    </div>
+    <h3>どもありがとうございます。</h3>
+    <h2>Your order is being prepared</h2>
+    <p>Hold on, when you least expect you will be eating your rámen.</p>
   `;
+
+  main.insertBefore(orderSuccessSection, buttonSection);
 }
