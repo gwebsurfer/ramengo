@@ -32,7 +32,7 @@ button:not(.success) {
   cursor: pointer;
 
   &::after {
-    content: url('../../assets/icons/arrow.svg');
+    content: url('../assets/icons/arrow.svg');
     display: inline-block;
     width: 1.313rem;
     height: 1rem;
@@ -55,7 +55,7 @@ button:not(.success) {
   gap: 0.8rem;
 
   &::after {
-    content: url('../../assets/icons/arrow-disabled.svg');
+    content: url('../assets/icons/arrow-disabled.svg');
     animation: none;
   }
 }

@@ -5,7 +5,7 @@ export function updateHeader(response) {
 
   header.innerHTML = `
     <div class="logo">
-      <img src="/assets/logo/ramen-go-logo-2.svg" alt="RamenGo Logo" />
+      <img src="../assets/logo/ramen-go-logo-2.svg" alt="RamenGo Logo" />
     </div>
     <div class="order-info">
       <img src="${response.image}" alt="${response.description}" />
@@ -28,7 +28,7 @@ export function updateMain() {
   orderSuccessSection.id = 'order-success';
   orderSuccessSection.innerHTML = `
     <div class="bowing">
-      <img src="./assets/bowing.svg" alt="RamenGo Illustration" />
+      <img src="../assets/bowing.svg" alt="RamenGo Illustration" />
     </div>
     <h3>どもありがとうございます。</h3>
     <h2>Your order is being prepared</h2>
