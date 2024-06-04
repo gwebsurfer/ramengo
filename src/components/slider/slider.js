@@ -1,4 +1,5 @@
 import { createSpinner } from '../spinner/spinner.js';
+import { showToast } from '../toast/toast.js';
 
 export function createSlider(sectionId, data, checkOrderButton, activeItemId) {
   const section = document.querySelector(sectionId);
@@ -11,15 +12,19 @@ export function createSlider(sectionId, data, checkOrderButton, activeItemId) {
   setTimeout(() => {
     sliderItems.removeChild(spinner);
 
-    data.forEach((item, index) => {
-      const sliderItem = createSliderItem(item, activeItemId);
-      sliderItems.appendChild(sliderItem);
+    if (Array.isArray(data)) {
+      data.forEach((item, index) => {
+        const sliderItem = createSliderItem(item, activeItemId);
+        sliderItems.appendChild(sliderItem);
 
-      const bullet = createBullet(index, sectionId);
-      sliderBullets.appendChild(bullet);
-    });
+        const bullet = createBullet(index, sectionId);
+        sliderBullets.appendChild(bullet);
+      });
 
-    addClickEventToItems(sectionId, data, checkOrderButton);
+      addClickEventToItems(sectionId, data, checkOrderButton);
+    } else {
+      showToast('Error loading list of ingredients', 'error');
+    }
   }, 2000);
 
   let activeSlide = 0;

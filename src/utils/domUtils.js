@@ -7,9 +7,11 @@ export function updateHeader(response) {
     <div class="logo">
       <img src="/assets/logo/ramen-go-logo-2.svg" alt="RamenGo Logo" />
     </div>
-    <img class="photo" src="${response.image}" alt="${response.description}" />
-    <h3>Your Order:</h3>
-    <h2>${response.description}</h2>
+    <div class="order-info">
+      <img src="${response.image}" alt="${response.description}" />
+      <h3>Your Order:</h3>
+      <h2>${response.description}</h2>
+    </div>
   `;
 }
 
