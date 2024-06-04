@@ -1,3 +1,6 @@
+import ramenLogo from '../assets/logo/ramen-go-logo-2.svg';
+import bowing from '../assets/bowing.svg';
+
 export function updateHeader(response) {
   const header = document.getElementById('header');
   header.classList.remove('default-header');
@@ -5,7 +8,7 @@ export function updateHeader(response) {
 
   header.innerHTML = `
     <div class="logo">
-      <img src="/ramengo/assets/logo/ramen-go-logo-2.svg" alt="RamenGo Logo" />
+      <img src="${ramenLogo}" alt="RamenGo Logo" />
     </div>
     <div class="order-info">
       <img src="${response.image}" alt="${response.description}" />
@@ -28,7 +31,7 @@ export function updateMain() {
   orderSuccessSection.id = 'order-success';
   orderSuccessSection.innerHTML = `
     <div class="bowing">
-      <img src="/ramengo/assets/bowing.svg" alt="RamenGo Illustration" />
+      <img src="${bowing}" alt="RamenGo Illustration" />
     </div>
     <h3>どもありがとうございます。</h3>
     <h2>Your order is being prepared</h2>
