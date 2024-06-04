@@ -6,6 +6,7 @@
 
   .slider-items {
     display: flex;
+    margin-left: -0.5rem;
     transition: transform 0.3s ease;
     gap: 1rem;
     cursor: grab;
@@ -16,6 +17,9 @@
   }
 
   .slider-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-width: 18rem;
     max-height: 19.75rem;
     padding: 2.5rem 1rem 0.5rem;
@@ -25,6 +29,7 @@
     cursor: pointer;
 
     img {
+      margin: 0 auto;
       padding: 0.5rem 0 0.875rem;
     }
 
@@ -55,11 +60,22 @@
 }
 
 @media (min-width: 992px) {
+  .slider {
+    max-width: 67.938rem;
+    margin: 0 auto;
+  }
+
   .slider-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 4rem !important;
     justify-items: center;
     transform: none !important;
+    width: 100%;
+  }
+
+  .slider-item {
+    width: 20rem;
+    max-width: 20rem;
   }
 }

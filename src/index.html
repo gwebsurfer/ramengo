@@ -18,14 +18,25 @@
       <div class="logo">
         <img src="/assets/logo/ramen-go-logo.svg" alt="RamenGo Logo" />
       </div>
-      <div>
-        <img src="/assets/RamenGo.svg" alt="RamenGo Delivery Illustration" />
+      <div class="illustration">
+        <img
+          src="/assets/ramen-go-illustration.png"
+          alt="RamenGo Delivery Illustration"
+        />
       </div>
-      <h1>ラーメン <span class="highlight">Go!</span></h1>
-      <p>
-        Enjoy a good ramen in the comfort of your house. Create your own ramen
-        and choose your favorite flavour combination!
-      </p>
+      <div id="header-content">
+        <h1>
+          <span class="ramen-text">ラーメン</span>
+          <span class="highlight">Go!</span>
+        </h1>
+        <p>
+          Enjoy a good ramen in the comfort of your house. Create your own ramen
+          and choose your favorite flavour combination!
+        </p>
+        <button id="order-now-button" class="primary-button">
+          Order now
+        </button>
+      </div>
     </header>
 
     <main id="main">
@@ -48,11 +59,13 @@
           <div class="slider-bullets"></div>
         </div>
       </section>
-    </main>
 
-    <footer>
-      <button id="order-button" class="primary-button"> Place my order </button>
-    </footer>
+      <section id="button">
+        <button id="order-button" class="primary-button">
+          Place my order
+        </button>
+      </section>
+    </main>
 
     <script type="module" src="/main.js"></script>
     <script type="module" src="components/slider/slider.js"></script>

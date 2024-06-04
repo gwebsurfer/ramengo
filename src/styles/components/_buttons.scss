@@ -1,14 +1,15 @@
 button:not(.success) {
-  margin: 0.5rem auto 0;
+  margin: 0 auto 0.875rem;
 }
+
 .success {
-  margin: 0.5rem auto 2.125rem;
+  margin: 0.5rem auto 3rem;
 }
 
 .primary-button {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   padding: 1.25rem 1rem;
   gap: 0.8rem;
